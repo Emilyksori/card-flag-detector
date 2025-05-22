@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Detector de Cartão</title>
+  <link rel="icon" type="image/png" href="../assets/cartão.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Detector de Bandeira de Cartão</h1>
+    <input type="text" id="cardInput" placeholder="Digite o número do cartão" maxlength="19">
+    <button onclick="checkCard()">Verificar</button>
+    <div id="result-card" class="result-card hidden">
+      <div id="icon-success" class="icon-container hidden">
+        <!-- Ícone de sucesso: aprovado.png -->
+        <img src="../assets/aprovado.png" alt="Cartão aprovado" width="150" height="150" />
+      </div>
+      <div id="icon-error" class="icon-container hidden">
+        <!-- Ícone de erro: recusado.png -->
+        <img src="../assets/recusado.png" alt="Cartão recusado" width="150" height="150" />
+      </div>
+      <div id="result-message"></div>
+      <button id="try-again" class="hidden" onclick="resetForm()">Tentar Novamente</button>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
